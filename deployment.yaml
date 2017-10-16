@@ -1,0 +1,28 @@
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: openstack-toolkit
+  labels:
+    application: openstack-toolkit
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: openstack-toolkit
+  template:
+    metadata:
+      labels:
+        app: openstack-toolkit
+    spec:
+      containers:
+      - name: openstack-toolkit
+        image: slarimore02/openstack-toolkit:v1.5
+        ports:
+          - containerPort: 22
+        env:
+          - name: PUBLIC_KEY
+            valueFrom:
+              secretKeyRef:
+                name: ssh-key-secret
+                key: ssh-publickey

@@ -1,0 +1,14 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: openstack-toolkit-svc
+spec:
+  selector:
+    app: openstack-toolkit
+  ports:
+  - name: ssh
+    port: 22
+    nodePort: 30015
+  type: NodePort
+
