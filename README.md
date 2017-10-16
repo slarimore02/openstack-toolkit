@@ -20,7 +20,10 @@ The Openstack Toolkit has all of the packages necessary to manage an Openstack c
 ## Running the Toolkit on Docker
 
 ```
-$ sudo docker run -d -e PUBLIC_KEY={{public-key}} -p 2022:22 slarimore02/openstack-toolkit:latest
+$ sudo docker run -d -e PUBLIC_KEY={{public-key}} -e OS_AUTH_URL={{os-auth-url}} -e OS_REGION_NAME={{region-name}} \
+-e OS_PROJECT_DOMAIN_NAME={{project-domain-name}} -e OS_PROJECT_NAME={{project-name}} -e OS_USER_DOMAIN_NAME={{user-domain-name}} \
+-e OS_USERNAME={{username}} -e OS_PASSWORD={{password}} -e OS_IDENTITY_API_VERSION=3 -e OS_IMAGE_API_VERSION=2 \
+-p 2022:22 slarimore02/openstack-toolkit:latest
 
 $ ssh {{HOST_IP}}:2022
 
