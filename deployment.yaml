@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: openstack-toolkit
-        image: slarimore02/openstack-toolkit:v1.8
+        image: slarimore02/openstack-toolkit:v1.9
         ports:
           - containerPort: 22
         env:
