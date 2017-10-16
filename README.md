@@ -5,6 +5,17 @@ The Openstack Toolkit has all of the packages necessary to manage an Openstack c
 
 - python-openstackclient
 - mariadb-client
+- python-glanceclient
+- python-ironicclient
+- python-manilaclient
+- python-novaclient
+- python-neutronclient
+- python-swiftclient
+- python-barbicanclient
+- python-cinderclient
+- python-ceilometerclient
+- python-heatclient
+- python-troveclient
 
 ## Running the Toolkit on Docker
 
