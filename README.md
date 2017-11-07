@@ -55,6 +55,7 @@ Clone the openstack-helm-addons repo and checkout the openstack-toolkit branch:
 $ git clone https://github.com/slarimore02/openstack-helm-addons.git
 $ cd openstack-helm-addons
 $ git checkout openstack-toolkit
+$ make
 ```
 Install the openstack-toolkit chart
 
